@@ -20,21 +20,33 @@ bored + intresting project
 
 You need Python installed. Then:
 
+Open CMD and:
+
 ```bash
-# grab the code
+# Go to your desktop (or wherever you work from)
+cd C:\Users\YourName\Desktop
+
+# Make a folder for this project
+mkdir malware-analysis
+cd malware-analysis
+
+# Grab the code
 git clone https://github.com/seventyfourfm/malware-analyzer.git
 cd malware-analyzer
 
-# install the two things it needs
+# Set up a virtual environment so you don't mess up your Python install
+python -m venv venv
+venv\Scripts\activate
+
+# You should see (venv) in your terminal now
+
+# Install the two things this needs
 pip install pefile capstone
 
-# that's it - run it
+# Done. Copy your suspicious file into this folder and run:
 python analyzer.py your_file.exe
 ```
-If you get errors about missing packages, just:
-```bash
-pip install -r requirements.txt
-```
+
 
 ## Example
 ```
