@@ -21,35 +21,24 @@ bored + interesting project
 You need Python installed. Then open CMD:
 
 ```bash
-# Go to your desktop (or wherever you work from)
+# Go to your desktop
 cd C:\Users\YourName\Desktop
 
-# Make a folder for this project
-mkdir malware-analysis
-cd malware-analysis
-
-# Grab the code
+# Clone the repo (this creates a folder called virus_analyzer)
 git clone https://github.com/seventyfourfm/virus_analyzer.git
-cd malware-analysis
 
-# Set up a virtual environment so you don't mess up your Python install
+# Go INTO that folder
+cd virus_analyzer
+
+# Set up virtual environment
 python -m venv venv
 venv\Scripts\activate
 
-# You should see (venv) in your terminal now
+# Install dependencies
+pip install -r requirements.txt
 
-# Install the two things this needs
-pip install pefile capstone
-
-# Done. Copy your suspicious file into this folder and run:
+# Copy your suspicious file into this folder, then run:
 python analyzer.py your_file.exe
-
-#If you already have the files
-cd C:\Users\YourName\Desktop\malware-analysis
-python -m venv venv
-venv\Scripts\activate
-pip install pefile capstone
-python analyzer.py srs.exe
 ```
 
 ### Example output
